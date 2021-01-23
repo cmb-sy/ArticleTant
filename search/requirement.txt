@@ -1,0 +1,4 @@
+arxiv==0.5.3
+googletrans==4.0.0rc1
+sklearn==0.24.1
+mecab-python3==1.0.3
