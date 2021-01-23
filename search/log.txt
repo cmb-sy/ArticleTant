@@ -1,31 +1,7 @@
 -------1ページ目-------
-author: James H. Kaufman
-url: http://arxiv.org/pdf/1911.02095v3
-title: IBM Functional Genomics Platform、大規模な微生物の生命を研究するためのクラウドベースのプラットフォーム
-date: 2020-03-30T23:14:33Z
-Abstract: 生物学的配列データの急速な成長は、遺伝子型の多様性の理解に革命をもたらし、情報学への従来のアプローチに挑戦しています。ゲノムデータの利用可能性が高まるにつれ、従来のバイオインフォマティクスツールは、研究者がデータから洞察を得ようとするたびに、かなりの計算時間を必要とし、さらに大きなインデックスを作成する必要があります。 of Molecular Biologyは、この情報をリレーショナルデータベースに取り込みました。データベースは数億のエンティティにわたってクエリを実行でき、従来の方法で必要とされる時間の何分の1かで結果を返します。このペーパーでは、\ textit {IBM Functional Genomics Platform}（旧称OMXWare）について説明します。これは、細菌の生命の表現型に遺伝子型を関連付ける包括的なデータベースです。継続的に更新されるIBM Functional Genomics Platformには、現在、200,000のキュレートされた自己無撞着に組み立てられたゲノムから派生したデータが含まれています。 。データベースには、6,800万を超える遺伝子、5,200万のタンパク質、2億3,900万のドメインの機能データが、GeneOntology、KEGG、MetaCyc、およびReactomeからの関連する生物活性アノテーションとともに保存されます。 IBM Functional Genomics Platformは、元のゲノム、遺伝子、タンパク質、およびタンパク質ドメインを含む、各生物学的エンティティ間の多対多の接続のすべてをマップします。感染症から環境衛生まで、さまざまな微生物研究は、豊富なデータとつながりから恩恵を受けることができます。データの選択、IBM Functional Genomics Platformを作成および更新するためのパイプライン、および研究者が微生物の生命を大規模に効率的に研究できるようにする開発ツール（PythonSDKおよびRESTAPI）について説明します。
--------2ページ目-------
-author: Yuan Luo
-url: http://arxiv.org/pdf/1807.07425v2
-title: ルールベースの機能と知識に基づく畳み込みニューラルネットワークを使用した臨床テキスト分類
-date: 2018-07-20T04:27:30Z
-Abstract: 臨床テキスト分類は、医療自然言語処理における重要な問題です。既存の研究は、従来、ルールまたは知識ソースベースの特徴エンジニアリングに焦点を合わせていましたが、深層学習手法の効果的な特徴学習機能を活用しているのはごくわずかです。この研究では、効果的な疾患分類のためにルールベースの機能と知識に基づく深層学習技術を組み合わせた新しいアプローチを提案します。私たちの方法の重要なステップには、トリガーフレーズの識別、トリガーフレーズを使用したごくわずかな例でのクラスの予測、および畳み込みニューラルネットワークのトレーニングが含まれます。単語の埋め込みとUnifiedMedical LanguageSystem（UMLS）エンティティの埋め込み。2008Integrating Informatics with Biology and the Bedside（i2b2）肥満チャレンジで私たちの方法を評価しました。結果は、私たちの方法が最先端の方法よりも優れていることを示しています。
--------3ページ目-------
-author: Raúl Rabadán
-url: http://arxiv.org/pdf/1611.06818v6
-title: 膠芽腫の臨床転帰の予測：トポロジー的および機能的データ分析の応用
-date: 2019-09-12T21:24:25Z
-Abstract: 多形性膠芽腫（GBM）は、癌生物学の分野で活発に研究されている攻撃的な形態のヒト脳癌です。その急速な進歩と分子データを取得するための相対的な時間コストにより、画像などの他のすぐに利用できる形式のデータが、患者の実用的な対策のための重要なリソースになります。私たちの目標は、統計的な設定でGBM患者から撮影された医療画像によって与えられた情報を利用することです。これを行うために、腫瘍の磁気共鳴画像（MRI）を定量化する新しい統計---滑らかなオイラー標数変換（SECT）---を設計します。明確に定義された内積構造により、SECTは、以前に提案された他のトポロジー要約統計量よりも幅広い機能的およびノンパラメトリックモデリングアプローチで使用できます。 GBM患者のコホートに適用すると、SECTは、既存の腫瘍形状の定量化と一般的な分子アッセイの両方よりも、臨床転帰のより良い予測因子であることがわかります。具体的には、SECTの特徴だけで、遺伝子発現、体積の特徴、形態計測の特徴よりも、GBMpatientの生存率の変動の多くを説明できることを示しています。したがって、私たちの調査結果からの主なポイントは2つあります。まず、画像には、臨床的予後やその他の医学的決定において重要な役割を果たすことができる貴重な情報が含まれていることを示唆しています。第二に、彼らは、SECTが医用画像情報学のより広範な研究のための実行可能なツールであることを示しています。
--------4ページ目-------
-author: Kristin Glass
-url: http://arxiv.org/pdf/1212.6808v1
-title: 社会拡散イベントの早期警告分析
-date: 2012-12-31T02:27:17Z
-Abstract: 社会的拡散プロセスの予測機能を開発することに大きな関心が寄せられています。たとえば、新たな論争のある状況の早期発見、病気の発生の迅速な検出、潜在的にウイルス性のアイデアや行動の最終的な到達範囲の正確な予測を可能にします。このホワイトペーパーでは、この予測分析の問題に対する新しいアプローチを提案します。このアプローチでは、メソスケールのネットワークダイナミクスの分析を活用して、複雑な社会現象の有用な予測を生成します。まず、現実的なトポロジを備えたソーシャルネットワーク上で行われる拡散プロセスの確率的ハイブリッド動的システム（S-HDS）モデルを導出します。このモデリングアプローチは、S-HDSが複雑なマルチスケールの生物学的ネットワークダイナミクスを表現するための有用な数学的形式を提供することを実証する生物学の最近の研究に触発されています。次に、このS-HDSモデルを使用して正式な確率的到達可能性分析を実行し、社会拡散プロセスの結果は、プロセスの初期のダイナミクスが基盤となるネットワークのコミュニティ構造およびコア周辺構造と相互作用する方法に大きく依存する可能性があると結論付けます。この理論的発見は、社会的拡散イベントの正確な早期警告分析を可能にする機械学習アルゴリズムを開発するための基盤を提供します。警告アルゴリズムの有用性、およびネットワークベースの予測メトリックの力は、ソーシャルメディアネットワークを介した政治的ミームの伝播の経験的調査を通じて実証されています。さらに、大規模な抗議イベントや政治的動機によるサイバー攻撃の早期警告分析を含むケーススタディを通じて、セキュリティインフォマティクスアプリケーションのアプローチの可能性を示します。
--------5ページ目-------
-author: Amedeo Napoli
-url: http://arxiv.org/pdf/cs/0506017v1
-title: Treillis deconcepts et ontologies pour l'interrogation d'un annuairedesourcesdedonnéesbiologiques（BioRegistry）
-date: 2005-06-06T12:49:53Z
-Abstract: ウェブ上で利用可能なバイオインフォマティクスデータソースは、複数の異種です。ドキュメントの欠如とこれらのデータソースとの相互作用の難しさは、かなり十分に活用されていないソースコンテンツの最適な使用のために情報学と生物学の両方の分野でのユーザーの能力を必要とします。この論文では、特定のクエリに関連するバイオインフォマティクスデータソースを分類および検索するための正式な概念分析に基づくアプローチを紹介します。これは、バイオインフォマティクスデータソースとそれに関連するメタデータの間のバイナリ関係から概念ラティスを構築することで構成されています。次に、特定のクエリから構築されたコンセプトがコンセプトラティスにマージされます。結果は、結果の概念ラティス内のクエリ概念包含者のエクステントに属するソースのセットの抽出によって与えられます。ソースのランク付けは、概念ラティスの概念の特異性の順序によって与えられます。アプローチのアニメーション化は、ドメインオントロジーのおかげで自動クエリの改良で構成されています。一般化と専門化によって、2つの形式の改良が可能です。 ----- Les sources de donn \ '{e} es biologiques disponibles sur le web sont multipleset h \' {e} t \ '{e} rog \ `{e} nes。 L'utilisationoptime de ces ressourcesn \ '{e} cessite aujourd'hui de la part des utilisateurs des comp \' {e} tences \ `{a} la fois en informatique et en biologie、du fait du manque de documentation etdes hard \ '{e} s d'interaction avec les sources de donn \' {e} es。 De fait、lescontenus de ces ressources restent souvent sous-exploit \ '{e} s。 Nouspr \ '{e} sentons ici une approche bas \' {e} e sur l'analyse de Concepts formels、pour Organizer et rechercher des sources de donn \ '{e} es biologiques pertinentespour une requ \ ^ {e} te donn \ '{e} e。 Le travailは、\ `{a} construire untreillis de Concepts \` {a} partir des m \ '{e} ta-donn \' {e} es associ \ '{e} esauxsourcesで構成されています。 Le Concept construit \ `{a} partir d'une requ \ ^ {e} te donn \ '{e} e estalors int \' {e} gr \ '{e} autreillis。 La r \ '{e} ponse \ `{a} la requ \ ^ {e} te estensuite fournie par l'extraction des sources de donn \' {e} es appartenant auxextensions des Concepts subsumant le Concept requ \ ^ {e} te dans letreillis。 Lessources ainsi retourn \ '{e} es peuvent \ ^ {e} tre tri \' {e} es selon l'ordre desp \ '{e} cificit \' {e} des Concepts dans letreillis。 Une proc \ '{e} dure deraffinement de requ \ ^ {e} te、bas \' {e} e sur des ontologies du domaine、permetd'am \ '{e} liorer le rappel par g \' {e} n \ '{e} ralisation ou par sp \' {e} cialisation
-DONE
+author: Eric Foxall
+url: http://arxiv.org/pdf/2101.08777v1
+title: 準拡散摂動の極限過程と分岐理論
+date: 2021-01-21T18:58:36Z
+Abstract: 常微分方程式（ODE）の分岐理論、および決定論的人口モデルへのその応用は、今では十分に確立されています。この記事では、基礎となる決定論的システムの分岐点付近の変動の空間と時間のスケールを理解することを目的として、動的システムの拡散のような摂動の補完的な理論の開発を開始します。そのために、分岐点の近くで発生する限界プロセスについて説明します。今回の記事では、1次元の場合に焦点を当てます。
+DONE.
