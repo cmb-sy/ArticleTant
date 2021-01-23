@@ -8,9 +8,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from googletrans import Translator
 import re
 
-
 # arxiv.query()の引数設定
-INPUT_TXT = '自然言語処理、つよつよマン欲しいなあ。' # ユーザが調べたい論文についての呟き.
+INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
 MAX_RESULTS = 1
 SORT_BY = "submittedDate"
 

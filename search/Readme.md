@@ -8,7 +8,7 @@
 
 - 環境構築
     - mecabインストール
-    - for mac: https://qiita.com/paulxll/items/72a2bea9b1d1486ca751, https://qiita.com/taroc/items/b9afd914432da08dafc8
+    - for mac: https://qiita.com/paulxll/items/72a2bea9b1d1486ca751, brew install mecab-ipadic
     - for windows:  https://qiita.com/menon/items/f041b7c46543f38f78f7s
     - ※　mecab-ipadic-NEologdもインストールするように。（新語に対応）
 
