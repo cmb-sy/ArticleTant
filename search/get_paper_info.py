@@ -13,7 +13,6 @@ INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文
 MAX_RESULTS = 1
 SORT_BY = "submittedDate"
 
-
 def make_input_txt(keywords, prefix, condition):
 
     input_txt = ""
@@ -28,9 +27,9 @@ def make_input_txt(keywords, prefix, condition):
 
 
 def get_translated(text, src="en", dest="ja"):
-    translator = Translator()
+    # translator = Translator()
+    translator = Translator(service_urls=['translate.googleapis.com'])
     return translator.translate(text, src=src, dest=dest).text
-
 
 def translate_post(idx, result):
 
@@ -62,7 +61,6 @@ def get_keyword(input_txt):
 
     return feature_words[0]
  
-
 def extract(text):
 
     # Taggerオブジェクトを生成
@@ -102,10 +100,8 @@ def main():
 
     for i, result in enumerate(results):
         translate_post(i, result)
-        
+    
     print("DONE.")
-
-
 
 if __name__ == "__main__":
     main()
