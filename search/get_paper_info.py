@@ -8,9 +8,13 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from googletrans import Translator
 import re
 
+# keywordをいくつまで考慮するか。
+KEYWORD_NUM = 2
+
 # arxiv.query()の引数設定
-INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
-MAX_RESULTS = 1
+# INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
+INPUT_TXT = 'バイオインフォマティクスの分野を研究している。自然言語処理をバイオインフォマティクスに応用したものが欲しいなあ。' # ユーザが調べたい論文についての呟き.
+MAX_RESULTS = 3
 SORT_BY = "submittedDate"
 
 
@@ -58,9 +62,9 @@ def get_keyword(input_txt):
     feature_names = np.array(vectorizer.get_feature_names())
     # print('feature_names:', feature_names)
     feature_words = feature_names[index]
-    # print('feature_words:', feature_words)
+    print('feature_words:', feature_words)
 
-    return feature_words[0]
+    return feature_words[0][:KEYWORD_NUM]
  
 
 def extract(text):
@@ -94,17 +98,21 @@ def main():
 
     keywords = get_keyword(INPUT_TXT) # ex: keywords = ["情報学", "生物学"]
 
-    query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="OR")
+    print(keywords)
+
+    query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="AND")
 
     query_txt_en = get_translated(query_txt_jp, src="ja", dest="en")
 
     results = arxiv.query(query = query_txt_en, max_results=MAX_RESULTS, sort_by=SORT_BY)
 
-    for i, result in enumerate(results):
-        translate_post(i, result)
+    if not len(results)==0:
+        for i, result in enumerate(results):
+            translate_post(i, result)
+    else:
+        print("文章を変えてみてね。")
         
     print("DONE.")
-
 
 
 if __name__ == "__main__":
