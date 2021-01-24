@@ -10,7 +10,7 @@ import re
 # INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
 SORT_BY = "submittedDate"
 text = ""
-MAX_RESULTS = 3
+MAX_RESULTS = 5
 # arxiv.query()の引数設定
 def make_input_txt(keywords, prefix, condition):
 
@@ -26,8 +26,8 @@ def make_input_txt(keywords, prefix, condition):
 
 
 def get_translated(text, src="en", dest="ja"):
-    # translator = Translator()
-    translator = Translator(service_urls=['translate.googleapis.com'])
+    translator = Translator()
+    # translator = Translator(service_urls=['translate.googleapis.com'])
     return translator.translate(text, src=src, dest=dest).text
 
 def translate_post(idx, result):
@@ -88,17 +88,19 @@ def extract(text):
     return text_result
 
 
-def main(INPUT_TXT ):
+def main(INPUT_TXT):
 
     global text
 
     keywords = get_keyword(INPUT_TXT) # ex: keywords = ["情報学", "生物学"]
 
-    query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="OR")
+    query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="AND")
 
     query_txt_en = get_translated(query_txt_jp, src="ja", dest="en")
 
-    results = arxiv.query(query = query_txt_en, max_results=MAX_RESULTS, sort_by=SORT_BY)
+    query_txt_en += 'AND (cs.AI OR cs.CV)'
+
+    results = arxiv.query(query = query_txt_en , max_results=MAX_RESULTS, sort_by=SORT_BY)
 
     print("aa",query_txt_en)
 
@@ -106,7 +108,6 @@ def main(INPUT_TXT ):
         print(i)
         text += translate_post(i, result) + '\n'
     return text
-
 if __name__ == "__main__":
-    INPUT = '自然言語処理、生物工学' 
-    main(INPUT)
+    # INPUT = '自然言語処理、生物工学' 
+    main()
