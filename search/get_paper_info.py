@@ -30,8 +30,8 @@ def make_input_txt(keywords, prefix, condition):
     return input_txt
 
 def get_translated(text, src="en", dest="ja"):
-    translator = Translator()
-    # translator = Translator(service_urls=['translate.googleapis.com'])
+    # translator = Translator()
+    translator = Translator(service_urls=['translate.googleapis.com'])
     return translator.translate(text, src=src, dest=dest).text
 
 def translate_post(idx, result):
