@@ -10,7 +10,7 @@ import re
 # INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
 SORT_BY = "submittedDate"
 text = ""
-MAX_RESULTS = 
+MAX_RESULTS = 3
 # arxiv.query()の引数設定
 def make_input_txt(keywords, prefix, condition):
 
@@ -88,7 +88,7 @@ def extract(text):
     return text_result
 
 
-def main(INPUT_TXT ,MAX_RESULTS):
+def main(INPUT_TXT ):
 
     global text
 
@@ -99,6 +99,8 @@ def main(INPUT_TXT ,MAX_RESULTS):
     query_txt_en = get_translated(query_txt_jp, src="ja", dest="en")
 
     results = arxiv.query(query = query_txt_en, max_results=MAX_RESULTS, sort_by=SORT_BY)
+
+    print("aa",query_txt_en)
 
     for i, result in enumerate(results):
         print(i)
