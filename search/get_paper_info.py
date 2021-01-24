@@ -13,7 +13,9 @@ KEYWORD_NUM = 2
 
 # arxiv.query()の引数設定
 # INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
+# INPUT_TXT = '自然言語処理、生物工学'
 INPUT_TXT = 'バイオインフォマティクスの分野を研究している。自然言語処理をバイオインフォマティクスに応用したものが欲しいなあ。' # ユーザが調べたい論文についての呟き.
+# INPUT_TXT = 'ブロックチェーンをデータベースに応用したものが欲しいなあ。'
 MAX_RESULTS = 3
 SORT_BY = "submittedDate"
 
@@ -103,6 +105,10 @@ def main():
     query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="AND")
 
     query_txt_en = get_translated(query_txt_jp, src="ja", dest="en")
+
+    print(query_txt_en)
+    query_txt_en += ' AND (cs.AI OR cs.CV)'
+    print(query_txt_en)
 
     results = arxiv.query(query = query_txt_en, max_results=MAX_RESULTS, sort_by=SORT_BY)
 
