@@ -7,12 +7,11 @@ from time import sleep
 from sklearn.feature_extraction.text import TfidfVectorizer
 from googletrans import Translator
 import re
-
-# arxiv.query()の引数設定
-INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
-MAX_RESULTS = 1
+# INPUT_TXT = '自然言語処理、生物工学' # ユーザが調べたい論文についての呟き.
 SORT_BY = "submittedDate"
-
+text = ""
+MAX_RESULTS = 
+# arxiv.query()の引数設定
 def make_input_txt(keywords, prefix, condition):
 
     input_txt = ""
@@ -35,14 +34,15 @@ def translate_post(idx, result):
 
     title_jpn = get_translated(result.title.replace("\n",""), src="en", dest="ja")
     abst_jpn =  get_translated(result.summary.replace("\n",""), src="en", dest="ja")
-    print("-------"+str(idx+1)+"ページ目-------")
-    print("author: {}".format(result.author))
-    print("url: {}".format(result.pdf_url))
-    print("title: {}".format(title_jpn))
-    print("date: {}".format(result.updated))
-    print("Abstract: {}".format(abst_jpn))
-    # sleep(5)
-
+    result_text =str("author: {}".format(result.author)+ '\n'+ "url: {}".format(result.pdf_url) + '\n'+ "title: {}".format(title_jpn)+ '\n'+"date: {}".format(result.updated)+ '\n'+"Abstract: {}".format(abst_jpn))+'\n'+'\n'+'\n'+'\n'+'\n'
+    return result_text
+    # print("-------"+str(idx+1)+"ページ目-------")
+    # print("author: {}".format(result.author))
+    # print("url: {}".format(result.pdf_url))
+    # print("title: {}".format(title_jpn))
+    # print("date: {}".format(result.updated))
+    # print("Abstract: {}".format(abst_jpn))
+    # # sleep(5)
 
 def get_keyword(input_txt):
 
@@ -88,7 +88,9 @@ def extract(text):
     return text_result
 
 
-def main():
+def main(INPUT_TXT ,MAX_RESULTS):
+
+    global text
 
     keywords = get_keyword(INPUT_TXT) # ex: keywords = ["情報学", "生物学"]
 
@@ -99,9 +101,10 @@ def main():
     results = arxiv.query(query = query_txt_en, max_results=MAX_RESULTS, sort_by=SORT_BY)
 
     for i, result in enumerate(results):
-        translate_post(i, result)
-    
-    print("DONE.")
+        print(i)
+        text += translate_post(i, result) + '\n'
+    return text
 
 if __name__ == "__main__":
-    main()
+    INPUT = '自然言語処理、生物工学' 
+    main(INPUT)
