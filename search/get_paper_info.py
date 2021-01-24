@@ -94,7 +94,7 @@ def main(INPUT_TXT):
 
     keywords = get_keyword(INPUT_TXT) # ex: keywords = ["情報学", "生物学"]
 
-    query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="AND")
+    query_txt_jp = make_input_txt(keywords, prefix="abs:", condition="OR")
 
     query_txt_en = get_translated(query_txt_jp, src="ja", dest="en")
 
